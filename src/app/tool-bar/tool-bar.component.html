@@ -1,0 +1,14 @@
+<md-toolbar color="primary">
+    <h4>Snakey</h4>
+    <span class="fill-space"></span>
+    <span class="score">
+                <md-icon svgIcon="{{fruitType()}}"></md-icon>
+                {{score()}}
+            </span>
+    <button *ngIf="!isStarted()" md-fab (click)="toggle()">
+        <md-icon svgIcon="play"></md-icon>
+    </button>
+    <button *ngIf="isStarted()" md-fab (click)="toggle()" color="warn">
+        <md-icon svgIcon="stop"></md-icon>
+    </button>
+</md-toolbar>

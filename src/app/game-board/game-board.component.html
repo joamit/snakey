@@ -1,0 +1,6 @@
+<div class="row" *ngFor="let column of board; let y=index">
+  <div class="column" *ngFor="let row of column; let x=index; trackBy:x" [style.background-color]="setStyling()">
+    <app-fruit *ngIf="setFruit(y, x)"></app-fruit>
+    <app-snake *ngIf="setSnake(y, x)"></app-snake>
+  </div>
+</div>
